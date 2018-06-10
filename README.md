@@ -8,3 +8,9 @@
 
 [pure-rust-os](https://os.phil-opp.com/news/2018-03-09-pure-rust/
 )
+
+# Make
+
+```
+make docker-build
+=> 
