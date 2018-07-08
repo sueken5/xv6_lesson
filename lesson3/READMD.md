@@ -46,7 +46,7 @@ outb(int port, uint8_t data)
 }
 ```
 
-# outbとintb
+# outbとinb
 
 outb(unsigned char value, int port)
   ポート番号 port に 1 バイトの value を出力する
