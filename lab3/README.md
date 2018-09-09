@@ -131,3 +131,39 @@ page_insertしてプロセスが使えるページを増やす良い！
 `env_run()`
 
 プロセス稼働へ
+
+# ex3
+
+割り込みと例外処理のことのお勉強
+
+Interrupts
+  Maskable interrupts, which are signalled via the INTR pin.
+  Nonmaskable interrupts, which are signalled via the NMI (Non-Maskable Interrupt) pin.
+Exceptions
+  Processor detected. These are further classified as faults, traps, and aborts.
+  Programmed. The instructions INTO, INT 3, INT n, and BOUND can trigger exceptions. These instructions are often called "software interrupts", but the processor handles them as exceptions.
+
+# ex4
+
+わりこみ、例外処理の実装。がんばるぞい
+
+## TSS
+
+Task state segment (TSS)は、x86ベースのCPUでタスクの情報を保存するための構造体である。
+
+以下のような情報がTSSに保存される。
+
+レジスタ情報
+I/Oポート許可ビットマップ(80386以降)
+Tビット(80386以降)
+割り込みリダイレクトビットマップ(Pentium以降)
+特権レベル0, 1, 2のスタックポインタ
+TSSのバックリンクセレクタ
+LDTセレクタ
+
+## GDT(Global Descriptor Table)
+
+## CR2
+
+ページ・フォールト・リニア・アドレス。
+ページフォールトを発生させたリニアアドレスが入っている。
